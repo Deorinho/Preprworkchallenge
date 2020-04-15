@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Prepr Explore Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesv2.css">
+</head>
+
+<body>
+    <!-- First I will create a wrapper class using Nav.wrapper to isolate the nav bar with the "body"
+    of the website-->
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    Prepr Network
+                </div>
+            </div>
+        </div>
+        <!-- using content wrapper classes I was able to group the entire tile in which 
+    one challenge would appear upon mouse hover-->
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(images/Explore_1.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+
+                        <div class="subtitle">NRC is seeking a low cost system (unit cost
+                            <$25) that can continuously measure temperature, peripheral capillary oxygen saturation (SpO2), blood pressure (BP), pulse and respiration rates, and transmit... </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_2.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">CThe Public Health Agency of Canada (PHAC) and National Research Council (NRC) are seeking a solution that will diagnose individuals affected by COVID-19 within 3 days of the start of their symptoms using a sample...</div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_3.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">View more details and submit the project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00090.html Problem statement The challenge we are facing is global and departmental. Globally, there is an accumulation of plastic ...</div>
+                        </div>
+                    </div>
+                    <!-- repeat the same block of divs 9 times to fill the website with an appropriate amount of challenges-->
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_4.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and 400 kt per year of automotive...</div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_5.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00092.html Problem statement It is estimated that Canada generates between 300 and 400 kt per year of automotive...</div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_6.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">View more details and submit your project here: https://www.ic.gc.ca/eic/site/101.nsf/eng/00086.html Problem statement Canada has committed to a vision of zero plastic waste where all plastics stay....</div>
+                        </div>
+                    </div>
+
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_7.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">Overview Prepr is kicking off its Future Sustainab...</div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_8.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">Too much of the world’s wealth is held by an extremely small percentage of the population, which leads to social and financial inequality...</div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Explore_9.jpg)"></div>
+                        <div class="img-text-wrapper">
+
+                            <div class="subtitle">Champions within organizations need a way to influence leaders to drive transformation from within...</div>
+                        </div>
+                    </div>
+
+
+</body>
+
+<script>
+    /* Here we add the function hover when mouse over. this allows the user to hover over the tile image
+        and it reveals a short quip aobut the challenge*/
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('image-blur');
+        });
+
+        portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('image-blur');
+        });
+    });
+</script>
+
+</html>
